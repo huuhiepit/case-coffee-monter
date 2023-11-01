@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Manager</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+
+</head>
+<body>
+    <header class="header">
+        
+        <div class="topbar">
+            <div class="container">
+                <div class="row-topbar">
+                    <div class="header-left">
+                        <a href="#" class="logo">
+                            <img src="../assets/images/logo.png" alt="">
+                        </a>
+                        <img src="../assets/images/delivery-man.png" alt="">
+                        <div class="info">
+                            <p>Gọi ngay</p>
+                            <a href="#" title="tel: 19009999">190019999</a>
+                        </div>
+                    </div>
+                    <div class="header-center">
+                        <div class="navbar">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Manager Product</a></li>
+                                <li><a href="">Manager Category</a></li>
+                                <li><a href="">Manager Customer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <div class="box-user fa-solid fa-user">
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        
+        <!-- section manager customer start  -->
+        <!-- name, urlImg,category,price, des, rating -->
+        <section class="manager-products">
+            <div class="container">
+                <div class="row">
+                    <form action="" class="form-create">
+                        <div class="info-form">
+                            <label>Tên sản phẩm</label>
+                            <input name="txtName" type="text" placeholder="Nhập tên sản phẩm">
+                        </div>
+                        <div class="info-form">
+                            <label>Ảnh sản phẩm</label>
+                            <input name="txtUrlImg" type="file"name="urlImgProduct" accept="image/*">
+                        </div>
+                        <div class="info-form">
+                            <label >Giá sản phẩm</label>
+                            <input name="txtPrice" min="0" type="number" placeholder="Nhập giá sản phẩm">
+                        </div>
+                        <div class="info-form">
+                            <label>Thể loại sản phẩm</label>
+                            <select name="sCatelory" id="selectCategory">
+                                
+                            </select>
+                        </div>
+                        <div class="info-form">
+                            <label>Mô tả sản phẩm</label>
+                            <textarea name="txtDes" id="" rows="2"></textarea>
+                            
+                        </div>
+                        <div class="info-form btnEdit">
+                            <label></label>
+                            <button onclick="handleAddProduct()" type="button" class="btn">Add</button>
+                        </div>
+        
+                    </form>
+                </div>
+                
+                <div class="row">
+                    <div class="search-box">
+                        <input name="txtSearch" type="text" placeholder="Search">
+                        <button onclick="searchNameProduct()" class="btn fas fa-search"></button>
+                    </div>
+                    <table class="table-box">
+                        <thead>
+                            <tr>
+                                <th>stt</th>
+                                <th>id</th>
+                                <th>product name</th>
+                                <th>Image</th>
+                                <th>price</th>
+                                <th>category</th>
+                                <th>des</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list-products">
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">Total product</td>
+                                <td id="total-product"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+        
+                    <div class="page-box">
+                        <input class="page-active" type="button" value="1">
+                        <input type="button" value="2">
+                        <input type="button" value="3">
+                        <input type="button" value="4">
+                        <input type="button" value="5">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section manager products end -->
+
+         <!-- section manager categories start  -->
+         <section class="manager-categories">
+
+         </section>
+ 
+         <!-- section manager categories end -->
+
+          <!-- section manager customer start  -->
+        <section class="manager-customer">
+
+        </section>
+
+        <!-- section manager customer end -->
+
+    </header>
+
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/admin.js"></script>
+</body>
+</html>

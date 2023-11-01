@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Monster</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="cart-popup active">
+        <div class="orders-cart">
+            <div class="orders-cart-ajax">
+                <div class="orders-cart-item" id="list_cart">
+                </div>
+
+                <div class="orders-cart-sub-amount">
+                    Tổng cộng:
+                    <span id="amount"></span>
+                </div>
+                <div class="order-pay">
+                    <button>Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="header-left">
+                        <a href="#" class="logo">
+                            <img src="../assets/images/logo.png" alt="">
+                        </a>
+                        <img src="../assets/images/delivery-man.png" alt="">
+                        <div class="info">
+                            <p>Gọi ngay</p>
+                            <a href="#" title="tel: 19009999">190019999</a>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="box-search fa-solid fa-magnifying-glass">
+                            <div class="search-form" id="search-form">
+                                <input type="text" placeholder="Tìm kiếm sản phẩm">
+                                <a href="" type="button" class="fa-solid fa-magnifying-glass"></a>
+                            </div>
+                        </div>
+                        <div class="box-cart fa-solid fa-cart-shopping" id="cart">
+                            <span class="count-item-product" id="total-cart"></span>
+                        </div>
+                        <div class="box-user fa-solid fa-user">
+                        </div>
+                        <div class="box-menu fa-solid fa-bars"></div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+    </header>
+
+    <section class="section-slider">
+        <div class="slide-container">
+            <img src="../assets/images/slider_1.jpg" alt="">
+        </div>
+        <section class="section-deal-hot">
+            <div class="container">
+                <div class="block-title">
+                    <div class="deal-hot">
+                        <a href="#">
+                            <img src="../assets/images/icon-flash.png" alt="">
+                            Deal hot trong ngày
+                        </a>
+                    </div>
+                    <div class="des">
+                        <p>Mua <span>1 phần nước</span> bất kì</p>
+                        <p>Tặng ngay <span>1 phần bánh ngọt</span> trị giá 30k</p>
+                    </div>
+                    <div class="tag">
+                        <p>Nhập "<span>tặng bánh ngọt</span>"</p>
+                    </div>
+                    <div class="buy-now">
+                        <a href="#">Đặt hàng ngay</a>
+                    </div>
+                </div>
+    
+                <div class="block-product" id="list_top5_product">
+                    
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <section class="section_about_us">
+        <div class="container">
+            <div class="relative">
+                <img src="../assets/images/img-about-us.png" alt="">
+            </div>
+            <div class="about-us">
+                <div class="heading">
+                    Về chúng tôi
+                </div>
+                <div class="about-us-des">
+                    Monster Coffee là quán cà phê với những hương vị cà phê thơm ngon đặc trưng kết hợp với không gian tuyệt đẹp, âm nhạc phong phú tạo lên phong cách sang đẹp, lịch sự, gần gũi. Phong cách riêng biệt chỉ Monster mới có.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-list">
+
+        <div class="container" id="list_categories">
+            
+        </div>
+
+    </section>
+
+    <section class="menu-list">
+        <div class="container">
+            <div class="heading">
+                Menu hôm nay
+            </div>
+
+            <div class="block-products" id="list_product">
+
+            </div>
+
+            <div class="view-more">
+                <a href="#">Xem thêm</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="blog-customer">
+        <div class="container">
+            <div class="heading">
+                Đánh giá của khách hàng
+            </div>
+            <div class="blog-review">
+                <div class="item-customer">
+                    <div class="customer-info">
+                        <div class="customer-img">
+                            <img src="../assets/images/reviews_1.png" alt="">
+                        </div>
+                        <div class="customer-name-start">
+                            <div class="customer-name">
+                                Chị Minh Nguyệt
+                            </div>
+                            <div class="start">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-des">
+						Tôi rất hài lòng về thái độ phục vụ của quán, cafe đa dạng, bánh ngon và không gian rất đẹp, mình thích sống ảo nên tại đây mình có thể chụp được những tấm ảnh đẹp cùng bạn bè, để hẹn hò cũng rất lãng mạn.
+                    </div>
+                </div>
+                <div class="item-customer">
+                    <div class="customer-info">
+                        <div class="customer-img">
+                            <img src="../assets/images/reviews_2.png" alt="">
+                        </div>
+                        <div class="customer-name-start">
+                            <div class="customer-name">
+                                Chị Thanh Tiền
+                            </div>
+                            <div class="start">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-des">
+						Tôi rất hài lòng về thái độ phục vụ của quán, cafe đa dạng, bánh ngon và không gian rất đẹp, mình thích sống ảo nên tại đây mình có thể chụp được những tấm ảnh đẹp cùng bạn bè, để hẹn hò cũng rất lãng mạn.
+                    </div>
+                </div>
+                <div class="item-customer">
+                    <div class="customer-info">
+                        <div class="customer-img">
+                            <img src="../assets/images/reviews_3.png" alt="">
+                        </div>
+                        <div class="customer-name-start">
+                            <div class="customer-name">
+                                Anh Hữu Nghĩa
+                            </div>
+                            <div class="start">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-des">
+						Tôi rất hài lòng về thái độ phục vụ của quán, cafe đa dạng, bánh ngon và không gian rất đẹp, mình thích sống ảo nên tại đây mình có thể chụp được những tấm ảnh đẹp cùng bạn bè, để hẹn hò cũng rất lãng mạn.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-work-time">
+        <div class="container">
+            <div class="innder">
+                <div class="heading">
+                    Thời gian hoạt động
+                </div>
+    
+                <div class="shop-work-des">
+                    Monster Coffee là quán cà phê với những hương vị cà phê thơm ngon đặc trưng kết hợp với không gian tuyệt đẹp, âm nhạc phong phú tạo lên phong cách sang đẹp, lịch sự, gần gũi. Phong cách riêng biệt chỉ Monster mới có.
+                </div>
+    
+                <div class="work-time">
+                    <div class="time">
+                        <span>Thứ 2 - Thứ 6 hàng tuần</span> <br>
+                        7am - 11am <br>
+                        11am - 10am
+                    </div>
+                    <div class="time">
+                        <span>Thứ 7 - Chủ nhật hàng tuần</span> <br>
+                        8am - 11am <br>
+                        11am - 9am
+                    </div>
+                </div>
+    
+                <div class="shop-info-shipper">
+                    <div class="shop-shipper">
+                        <img src="../assets/images/shipper.png" alt="">
+                    </div>
+                    <div class="shop-order">
+                        Hotline đặt hàng <br>
+                        <span class="phone">19009999</span>
+                    </div>
+                </div>
+    
+                <div class="shop-order-now">
+                    <a href="#" class="order-now">Đặt hàng ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-news">
+        <div class="container">
+            <div class="heading">
+                Tin tức mới nhất
+            </div>
+
+            <div class="blog-shop-new">
+                <div class="item-news">
+                    <div class="news-img">
+                        <a href="#" class="">
+                            <img src="../assets/images/news01.png" alt="">
+                        </a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-title">
+                            Sở thích uống cà phê tiết lộ bí mật động trời ...
+                        </div>
+                        <div class="news-des">
+                            Hãy nói cho tôi loại cà phê mà bạn hay uống, tôi sẽ nói cho bạn biết bạn là người như thế nào”. Chỉ với ...
+                        </div>
+                        <a href="#" class="link-news">Xem tất cả</a>
+                    </div>
+                </div>
+
+                <div class="item-news">
+                    <div class="news-img">
+                        <a href="#" class="">
+                            <img src="../assets/images/news02.png" alt="">
+                        </a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-title">
+                            Sở thích uống cà phê tiết lộ bí mật động trời ...
+                        </div>
+                        <div class="news-des">
+                            Hãy nói cho tôi loại cà phê mà bạn hay uống, tôi sẽ nói cho bạn biết bạn là người như thế nào”. Chỉ với ...
+                        </div>
+                        <a href="#" class="link-news">Xem tất cả</a>
+                    </div>
+                </div>
+
+                <div class="item-news">
+                    <div class="news-img">
+                        <a href="#" class="">
+                            <img src="../assets/images/news03.png" alt="">
+                        </a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-title">
+                            Sở thích uống cà phê tiết lộ bí mật động trời ...
+                        </div>
+                        <div class="news-des">
+                            Hãy nói cho tôi loại cà phê mà bạn hay uống, tôi sẽ nói cho bạn biết bạn là người như thế nào”. Chỉ với ...
+                        </div>
+                        <a href="#" class="link-news">Xem tất cả</a>
+                    </div>
+                </div>
+
+                <div class="item-news">
+                    <div class="news-img">
+                        <a href="#" class="">
+                            <img src="../assets/images/news04.png" alt="">
+                        </a>
+                    </div>
+                    <div class="news-info">
+                        <div class="news-title">
+                            Sở thích uống cà phê tiết lộ bí mật động trời ...
+                        </div>
+                        <div class="news-des">
+                            Hãy nói cho tôi loại cà phê mà bạn hay uống, tôi sẽ nói cho bạn biết bạn là người như thế nào”. Chỉ với ...
+                        </div>
+                        <a href="#" class="link-news">Xem tất cả</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="shop-info">
+        <div class="malchim">
+            <div class="container">
+                <div class="items-left">
+                    <h4>Đăng kí nhận khuyến mãi</h4>
+                    <div>Đừng bỏ lỡ những sản phẩm và chương trình khuyến mãi hấp dẫn</div>
+                </div>
+                <div class="items-right">
+                    <div class="news-letter-form">
+                        <input type="email" placeholder="Email của bạn">
+                        <button class="btn">Đăng kí</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mid-fotter">
+            <div class="container">
+                <div class="items-left">
+                    <img src="../assets/images/logo.png" alt="">
+                    <div class="des">Monster Coffee mong rằng chúng tôi luôn mang đến cho khách hàng những trải nghiệm tốt nhất, tạo ra những khoảnh khắc khó quên khi đến với Monster.</div>
+                </div>
+                <div class="items-right">
+                    <div class="system-shop">
+                        <h3>Hệ thống cửa hàng</h3>
+                        <div class="des"><i class="fa-solid fa-location-dot"></i> CN1: Tầng 6 toà nhà Ladeco, 266 Đội Cấn, phường Liễu Giai, Hà Nội, Việt Nam</div>
+                        <div class="des"><i class="fa-solid fa-location-dot"></i> CN2: Toà nhà Lữ Gia, 70 Lữ Gia, phường 15, quận 11, TP. HCM, Việt Nam</div>
+
+                    </div>
+                    <div class="contac-shop">
+                        <h3>Liên hệ</h3>
+                        <div class="des"><i class="fa-solid fa-phone"></i> Hotline đặt hàng: 19009999</div>
+                        <div class="des"><i class="fa-solid fa-envelope"></i> Email: support@sapo.vn</div>
+                        <div class="des">
+                            Thứ 2 - Thứ 6: 7am - 10pm <br>
+                            Thứ 7 - Chủ nhật: 8am - 9pm
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-fotter">
+            @ Bản quyền thuộc về Awesome Team | Người thực hiện: <span>Nguyễn Hữu Hiệp</span>
+        </div>
+    </footer>
+    
+
+
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+</html>
