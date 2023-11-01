@@ -77,7 +77,7 @@ function handleEditProduct(id) {
         }
         strSelect += '</select>';
         tdCategory.innerHTML = strSelect;
-        tdDes.innerHTML = `<textarea name="editDes" id="" rows="2">${product.des}</textarea>`;
+        tdDes.innerHTML = `<textarea name="editDes" id="" rows="5">${product.des}</textarea>`;
 
         tdAction.innerHTML = `
             <button class="btn btn-edit" onclick="handleUpdateProduct(${id})">
