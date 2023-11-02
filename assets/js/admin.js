@@ -19,7 +19,7 @@ function showProducts() {
             <td>${i}</td>
             <td>P-${product.id}</td>
             <td>${product.name}</td>
-            <td class="table-img"><img src="../images/products/${product.urlImg}" alt=""></td>
+            <td class="table-img"><img src="assets/images/products/${product.urlImg}" alt=""></td>
             <td class="table-number">${formatCurrency(product.price)}</td>
             <td>${product.category.name}</td>
             <td style="width: 25%;">${product.des}</td>
@@ -132,7 +132,7 @@ function handleCancelProduct(id) {
             <td>${stt}</td>
             <td>P-${product.id}</td>
             <td>${product.name}</td>
-            <td class="table-img"><img src="../images/products/${product.urlImg}" alt=""></td>
+            <td class="table-img"><img src="assets/images/products/${product.urlImg}" alt=""></td>
             <td class="table-number">${formatCurrency(product.price)}</td>
             <td>${product.category.name}</td>
             <td style="width: 25%;">${product.des}</td>
@@ -209,7 +209,7 @@ function searchNameProduct() {
             <td>${i}</td>
             <td>P-${product.id}</td>
             <td>${product.name}</td>
-            <td class="table-img"><img src="../images/products/${product.urlImg}" alt=""></td>
+            <td class="table-img"><img src="assets/images/products/${product.urlImg}" alt=""></td>
             <td class="table-number">${formatCurrency(product.price)}</td>
             <td>${product.category.name}</td>
             <td style="width: 25%;">${product.des}</td>
