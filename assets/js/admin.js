@@ -127,7 +127,7 @@ function handleUpdateProduct(id) {
 
 function handleCancelProduct(id) {
     let product = findProductById(id);
-    let stt = document.querySelectorAll(`#tr_-product${id}`)[0];
+    let stt = document.querySelectorAll(`#tr_product-${id} td`)[0].textContent;
     let str = `
             <td>${stt}</td>
             <td>P-${product.id}</td>
@@ -138,9 +138,9 @@ function handleCancelProduct(id) {
             <td style="width: 25%;">${product.des}</td>
             <td>
                 <button class="btn fas fa-edit btn-edit" type="button" onclick="handleEditProduct(${product.id})" type="button"></button>
-                <button class="btn fas fa-trash btn-delete" type="button" onclick=""></button>
+                <button class="btn fas fa-trash btn-delete" type="button" onclick="handleDeleteProduct(${product.id})"></button>
             </td>`;
-    document.querySelectorAll(`#tr_-product${id}`).innerHTML = str;
+    document.querySelector(`#tr_product-${id}`).innerHTML = str;
     
     editValue = false;
 }
