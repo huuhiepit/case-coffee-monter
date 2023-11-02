@@ -48,7 +48,7 @@ body {
 }
 
 .heading::before {
-    background-image: url(assets/images/logo-title-w.png);
+    background-image: url(../images/logo-title-w.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,7 +60,7 @@ body {
 }
 
 .heading::after {
-    background-image: url(assets/images/bg-after-title.png);
+    background-image: url(../images/bg-after-title.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -526,7 +526,7 @@ body {
 }
 
 .menu-list {
-    background-image: url(assets/images/bg-menu-today2.png);
+    background-image: url(../images/bg-menu-today2.png);
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
@@ -654,7 +654,7 @@ body {
 }
 
 .shop-work-time {
-    background-image: url(assets/images/slider_2.jpg);
+    background-image: url(../images/slider_2.jpg);
     background-repeat: no-repeat;
     position: relative;
     min-height: 865px;
@@ -662,7 +662,7 @@ body {
 }
 
 .innder {
-    background-image: url(assets/images/bg-inner-thoi-gian-hoat-dong.png);
+    background-image: url(../images/bg-inner-thoi-gian-hoat-dong.png);
     background-repeat: no-repeat;
     background-position: center top;
     width: 795px;
@@ -673,11 +673,11 @@ body {
 }
 
 .innder .heading::before {
-    background-image: url(assets/images/logo-title-w01.png);
+    background-image: url(../images/logo-title-w01.png);
 }
 
 .innder .heading::after {
-    background-image: url(assets/images/bg-after-title-w02.png);
+    background-image: url(../images/bg-after-title-w02.png);
 }
 
 .innder .shop-work-des {
