@@ -49,9 +49,18 @@ function handleAddProduct() {
     if(errorProduct(product)) {
         products.push(product);
         localStorage.setItem("KEY_PRODUCTS", JSON.stringify(products));
+        clearInputAddProduct(); 
         showProducts();
     }
 }   
+
+function clearInputAddProduct() {
+    document.querySelector('.info-form input[name="txtName"]').value = ''; 
+    document.querySelector('.info-form input[name="txtUrlImg"]').files[0].name = ''; 
+    document.querySelector('.info-form input[name="txtPrice"]').value = ''; 
+    document.querySelector('.info-form select[name="sCatelory"]').value = ''; 
+    document.querySelector('.info-form textarea[name="txtDes"]').value = '';
+}
 
 let editValue = true;
 

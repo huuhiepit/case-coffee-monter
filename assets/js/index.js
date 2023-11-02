@@ -7,7 +7,7 @@ function getTop5Product() {
                 <div class="product-item">
                     <div class="product-thumb-info">
                         <a href="#" title="" class="product-thumbnail">
-                            <img src="../assets/images/products/${products[i].urlImg}" alt="">
+                            <img src="assets/images/products/${products[i].urlImg}" alt="">
                         </a>
                         <div class="info-action-start">
                             <div class="product-info">
@@ -40,7 +40,7 @@ function showCategories() {
         str += `
             <div class="item-category">
                 <div class="category-img">
-                    <img src="../assets/images/categories/${categories[i].urlImg}" alt="">
+                    <img src="assets/images/categories/${categories[i].urlImg}" alt="">
                 </div>
                 <div class="category-info">
                     <h4>${categories[i].name}</h4>
@@ -60,7 +60,7 @@ function showProducts() {
         str += `
                 <div class="item-product">
                     <div class="item-img">
-                        <img src="../assets/images/products/${products[i].urlImg}" alt="">
+                        <img src="assets/images/products/${products[i].urlImg}" alt="">
                     </div>
                     <div class="item-info">
                         <div class="item-name-price">
